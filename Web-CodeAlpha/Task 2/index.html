@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1 class="app-title">To-Do List</h1>
+        <div class="task-counter" aria-live="polite">
+          <span id="task-count">0 tasks</span>
+        </div>
+      </header>
+
+      <section class="add-task-section">
+        <form id="add-task-form" class="add-task-form">
+          <div class="input-group">
+            <label for="task-title" class="visually-hidden">Task title</label>
+            <input
+              type="text"
+              id="task-title"
+              placeholder="Add a new task…"
+              required
+              autocomplete="off"
+            />
+
+            <label for="due-date" class="visually-hidden">Due date</label>
+            <input type="date" id="due-date" title="Due date (optional)" />
+
+            <label for="priority" class="visually-hidden">Priority</label>
+            <select id="priority" title="Priority level">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary">
+              <span class="btn-text">Add</span>
+              <span class="btn-icon" aria-hidden="true">+</span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="controls-section">
+        <div class="filters">
+          <div class="filter-buttons" role="tablist">
+            <button
+              type="button"
+              class="filter-btn active"
+              data-filter="all"
+              role="tab"
+              aria-selected="true"
+              aria-controls="task-list"
+            >
+              All
+            </button>
+            <button
+              type="button"
+              class="filter-btn"
+              data-filter="active"
+              role="tab"
+              aria-selected="false"
+              aria-controls="task-list"
+            >
+              Active
+            </button>
+            <button
+              type="button"
+              class="filter-btn"
+              data-filter="completed"
+              role="tab"
+              aria-selected="false"
+              aria-controls="task-list"
+            >
+              Completed
+            </button>
+          </div>
+
+          <div class="search-container">
+            <label for="search-input" class="visually-hidden"
+              >Search tasks</label
+            >
+            <input
+              type="search"
+              id="search-input"
+              placeholder="Search tasks…"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="clear-completed" class="btn btn-secondary">
+            Clear Completed
+          </button>
+          <button
+            type="button"
+            id="dark-mode-toggle"
+            class="btn btn-icon"
+            title="Toggle dark mode"
+          >
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+            <span class="visually-hidden">Toggle dark mode</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="tasks-section">
+        <ul
+          id="task-list"
+          class="task-list"
+          role="list"
+          aria-label="Task list"
+        ></ul>
+
+        <div id="empty-state" class="empty-state" aria-live="polite">
+          <div class="empty-icon" aria-hidden="true">📝</div>
+          <h2>No tasks yet</h2>
+          <p>Add your first task above to get started!</p>
+        </div>
+      </section>
+
+      <footer
+        class="stats-footer"
+        id="stats-footer"
+        aria-live="polite"
+      ></footer>
+
+      <footer class="developer-footer">
+        <div class="developer-info">
+          <p>Built by <strong>Ali Abdelazim</strong></p>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/ali-abdelazim"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+            >
+              <span class="social-icon">💼</span>
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/aliabdelazim7"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
+            >
+              <span class="social-icon">🐙</span>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <div
+      id="delete-confirm"
+      class="modal"
+      role="dialog"
+      aria-labelledby="delete-title"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <h2 id="delete-title">Delete Task</h2>
+        <p>
+          Are you sure you want to delete this task? This action cannot be
+          undone.
+        </p>
+        <div class="modal-actions">
+          <button type="button" id="delete-cancel" class="btn btn-secondary">
+            Cancel
+          </button>
+          <button type="button" id="delete-confirm-btn" class="btn btn-danger">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="announcements"
+      class="visually-hidden"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
