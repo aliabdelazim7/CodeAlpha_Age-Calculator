@@ -57,9 +57,3 @@ A **To-Do List** web app for managing daily tasks with persistence using `localS
 - Local Storage for data persistence  
 
 🔗 **Live Demo:** [To-Do List App](https://to-do-list-task45.netlify.app/)  
-
----
-
-## ✅ Conclusion  
-Both projects focus on strengthening **core JavaScript concepts** like DOM manipulation, event handling, and local storage.  
-They are beginner-friendly and can be extended with new features (e.g., task editing, filters, better UI/UX).  
