@@ -1,45 +1,74 @@
-Age Calculator
+Web Development Internship Tasks – CodeAlpha
 
-A simple web-based application that calculates a user’s age in years, months, and days, along with the total number of days lived.
+This repository contains my solutions for the CodeAlpha Web Development Internship tasks.
+The projects are built using HTML, CSS, and JavaScript to practice core front-end concepts.
+
+🚀 Live Demos
+
+Age Calculator: https://age-calc-task.netlify.app/
+
+To-Do List App: https://to-do-list-task45.netlify.app/
+
+📌 Task 1: Age Calculator
+Objective
+
+A web-based age calculator that calculates age in years, months, and days from the user’s Date of Birth.
+
+Features
+
+Input Date of Birth (day, month, year).
+
+Calculate and display the age in years, months, and days.
+
+Simple and user-friendly UI.
+
+Tech Stack
+
+HTML – Form input.
+
+CSS – Styling and layout.
+
+JavaScript – Age calculation using Date object.
+
+Key Concepts
+
+DOM Manipulation
+
+Working with JavaScript Date & Time
+
+Input Validation
 
 🔗 Live Demo: https://age-calc-task.netlify.app/
 
-🚀 Features
+📌 Task 2: To-Do List
+Objective
 
-User inputs day, month, and year of birth.
+A To-Do List web app for managing daily tasks with persistence using localStorage.
 
-Calculates and displays:
+Features
 
-Age in years, months, and days.
+Add new tasks.
 
-Total number of days lived.
+Mark tasks as completed.
 
-Input validation to ensure proper date entry.
+Delete (or edit) tasks.
 
-Clean and responsive design using HTML, CSS, and JavaScript.
+Save tasks in localStorage so they persist after refresh.
 
-📖 How to Use
+Tech Stack
 
-Open the app: Age Calculator
+HTML – Structure of the app.
 
-Select your Date of Birth.
+CSS – Layout and styles.
 
-Click on Calculate Age.
+JavaScript – Task logic & interaction.
 
-Your age and total days lived will be displayed below.
+Key Concepts
 
-🛠️ Tech Stack
+CRUD operations in JavaScript
 
-HTML – Structure of the page.
+Event handling (click, submit)
 
-CSS – Styling for better UI.
+Local Storage for data persistence
 
-JavaScript – Age calculation logic using the Date object.
-
-🎯 Key Learning Concepts
-
-DOM Manipulation – Handling user input and updating the result dynamically.
-
-JavaScript Date & Time – Working with the Date object to calculate differences.
-
-Validation – Ensuring proper input before performing calculations.
+🔗 Live Demo: https://to-do-list-task45.netlify.app/
